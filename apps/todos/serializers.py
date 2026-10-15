@@ -21,11 +21,15 @@ class TodoSerializer(serializers.ModelSerializer):
             "due_date",
             "is_overdue",
             "created_at",
-            "category"
+            "category",
+            "is_deleted",
+            "deleted_at"
         ]
 
         read_only_fields = [
             "id",
             "created_at",
-            "is_overdue"
+            "is_overdue",
+            "is_deleted",
+            "deleted_at"
         ]

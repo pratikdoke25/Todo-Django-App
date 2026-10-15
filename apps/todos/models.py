@@ -42,6 +42,11 @@ class Todo(models.Model) :
         blank=True
     )
 
+    is_deleted = models.BooleanField(default=False)
+
+    deleted_at  = models.DateTimeField(null=True,
+                                       blank=True)
+
     @property
     def is_overdue(self):
         return (
